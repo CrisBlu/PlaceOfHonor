@@ -1,10 +1,14 @@
+using System;
 using UnityEngine;
 
 public class MB_Rock : MonoBehaviour
 {
     [SerializeField] Data_Rock data;
     [SerializeField] SpriteRenderer sprite;
-    private float[] layerHP = new float[3];
+    [SerializeField] SpriteMask mask;
+    [SerializeField] bool OverFossil;
+
+    private float[] layerHP = new float[4];
     private int layer;
 
     void Start()
@@ -16,13 +20,11 @@ public class MB_Rock : MonoBehaviour
 
     void Update()
     {
-        TakeDamage(.1f);
+
     }
 
-    void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
-        if (layer == 3)
-            return;
 
         layerHP[layer] -= damage;
 
@@ -32,6 +34,11 @@ public class MB_Rock : MonoBehaviour
             {
                 layer++;
                 ShiftLayer(layer);
+            }
+            else if(OverFossil)
+            {
+                mask.enabled = true;
+                Debug.Log("Fossil broken!");
             }
         }
     }

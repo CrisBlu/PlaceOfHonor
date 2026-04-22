@@ -7,7 +7,7 @@ public class MB_PlayerInput : MonoBehaviour
     [SerializeField] Camera SceneCamera;
     [SerializeField] Transform Cursor;
 
-    private float power = 12f;
+    private float power = 40f;
     private LayerMask defaultMask;
     private LayerMask rockMask;
 
@@ -51,9 +51,15 @@ public class MB_PlayerInput : MonoBehaviour
     {
         Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, 1f, rockMask);
 
+        if(hitRocks.Length <= 0)
+            { return; }
+
+        int layerStruck = hitRocks[0].GetComponent<MB_Rock>().layer;
+
         foreach (Collider rock in hitRocks)
         {
-            rock.GetComponent<MB_Rock>().TakeDamage(power);
+            //float powerAfterFalloff = 
+            rock.GetComponent<MB_Rock>().TakeDamage(power, layerStruck);
         }
 
 

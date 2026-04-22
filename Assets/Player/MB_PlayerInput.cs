@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -7,9 +8,18 @@ public class MB_PlayerInput : MonoBehaviour
     [SerializeField] Camera SceneCamera;
     [SerializeField] Transform Cursor;
 
-    private float power = 40f;
+    enum Tool
+    { 
+        hammer,
+        drill,
+        none
+    }
+
+
+    
     private LayerMask defaultMask;
     private LayerMask rockMask;
+    private Tool currentTool = Tool.hammer;
 
     private InputAction useToolAction;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,7 +29,8 @@ public class MB_PlayerInput : MonoBehaviour
         useToolAction.performed += UseTool;
 
 
-        defaultMask = LayerMask.GetMask("Default");
+
+       defaultMask = LayerMask.GetMask("Default");
         rockMask = LayerMask.GetMask("Rock");
     }
 
@@ -49,10 +60,31 @@ public class MB_PlayerInput : MonoBehaviour
 
     void UseTool(InputAction.CallbackContext context)
     {
-        Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, 1f, rockMask);
+        switch(currentTool)
+        {
+            case Tool.hammer:
+                UseHammer();
+                break;
 
-        if(hitRocks.Length <= 0)
-            { return; }
+            case Tool.drill:
+                UseDrill();
+                break;
+
+            case Tool.none:
+                break;
+        }
+
+
+
+
+    }
+
+    void UseHammer(float power = 40f)
+    {
+        Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .5f, rockMask);
+
+        if (hitRocks.Length <= 0)
+        { return; }
 
         int layerStruck = hitRocks[0].GetComponent<MB_Rock>().layer;
 
@@ -61,9 +93,31 @@ public class MB_PlayerInput : MonoBehaviour
             //float powerAfterFalloff = 
             rock.GetComponent<MB_Rock>().TakeDamage(power, layerStruck);
         }
+    }
 
+    async void UseDrill(float power = .1f)
+    {
 
+        while(useToolAction.IsPressed())
+        {
 
+            Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .1f, rockMask);
+
+            if (hitRocks.Length > 0)
+            {
+                int layerStruck = hitRocks[0].GetComponent<MB_Rock>().layer;
+
+                foreach (Collider rock in hitRocks)
+                {
+                    //float powerAfterFalloff = 
+                    rock.GetComponent<MB_Rock>().TakeDamage(power, layerStruck);
+                }
+            }
+            await Task.Yield();
+
+        }
+
+        
 
     }
 }

@@ -12,6 +12,8 @@ public class MB_FossilBar : MonoBehaviour
         rockData.Event_ShiftFossilBar.AddListener(ShiftFossilBar);
     }
 
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -24,5 +26,18 @@ public class MB_FossilBar : MonoBehaviour
         Slider bar = damageOrClean ? CleanBar : DamageBar;
 
         bar.value = value;
+    }
+
+    public void ResetBar()
+    {
+        rockData.Event_ShiftFossilBar.RemoveListener(ShiftFossilBar);
+        DamageBar.value = 0;
+        CleanBar.value = 0;
+
+    }
+
+    public void RearmBar()
+    {
+        rockData.Event_ShiftFossilBar.AddListener(ShiftFossilBar);
     }
 }

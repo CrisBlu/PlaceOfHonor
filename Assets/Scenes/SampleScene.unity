@@ -931,6 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FossilRocks:
   - {fileID: 3371942063948488997, guid: 635a1174d7706144e872a316464017b3, type: 3}
+  - {fileID: 3371942063948488997, guid: ba6ce130cd29fb743a240a67eef40794, type: 3}
   fossilBar: {fileID: 1442257042}
 --- !u!1 &832575517
 GameObject:

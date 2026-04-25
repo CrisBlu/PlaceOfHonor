@@ -5,6 +5,7 @@ public class MB_GameManager : MonoBehaviour
 {
     [SerializeField] GameObject[] FossilRocks;
     [SerializeField] MB_FossilBar fossilBar;
+    [SerializeField] MB_Timer Timer;
     private GameObject currentRock;
     private int i;
 
@@ -45,6 +46,7 @@ public class MB_GameManager : MonoBehaviour
             fossilBar.ResetBar();
             fossilBar.rockData = null;
             currentRock = null;
+            Timer.StopAllCoroutines();
             
         }
         
@@ -59,13 +61,15 @@ public class MB_GameManager : MonoBehaviour
             fossilBar.ResetBar();
             fossilBar.rockData = null;
             currentRock = null;
-            
+            Timer.StopAllCoroutines();
+
         }
 
         currentRock = Instantiate(FossilRocks[i]);
         MB_PlayerInput.input.currentRock = currentRock.GetComponent<MB_XRay>().data;
         fossilBar.rockData = currentRock.GetComponent<MB_XRay>().data;
         fossilBar.RearmBar();
+        Timer.StartTimer();
 
         i++;
         i %= FossilRocks.Length;

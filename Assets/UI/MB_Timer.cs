@@ -9,14 +9,15 @@ public class MB_Timer : MonoBehaviour
     private int timerValue;
 
 
-    void Start()
+
+
+    public void StartTimer()
     {
         timerValue = TimerSeconds;
         int minutes = Mathf.FloorToInt(timerValue / 60F);
         int seconds = Mathf.FloorToInt(timerValue - minutes * 60);
         timer.text = string.Format("{0:0}:{1:00}", minutes, seconds);
         StartCoroutine(timerTick());
-
     }
 
 

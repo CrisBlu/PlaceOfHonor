@@ -1069,6 +1069,7 @@ MonoBehaviour:
   - {fileID: 3371942063948488997, guid: 635a1174d7706144e872a316464017b3, type: 3}
   - {fileID: 3371942063948488997, guid: ba6ce130cd29fb743a240a67eef40794, type: 3}
   fossilBar: {fileID: 1442257042}
+  Timer: {fileID: 1442257047}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,7 +1647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc3df193b8ba8642a006f0cba5d2e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimerSeconds: 90
+  TimerSeconds: 91
   timer: {fileID: 666908893}
 --- !u!1 &1546986372
 GameObject:

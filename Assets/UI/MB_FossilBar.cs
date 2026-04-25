@@ -5,7 +5,7 @@ public class MB_FossilBar : MonoBehaviour
 {
     [SerializeField] Slider CleanBar;
     [SerializeField] Slider DamageBar;
-    [SerializeField] Data_Rock rockData;
+    public Data_Rock rockData;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

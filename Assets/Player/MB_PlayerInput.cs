@@ -7,13 +7,11 @@ public class MB_PlayerInput : MonoBehaviour
 {
     [SerializeField] Camera SceneCamera;
     [SerializeField] Transform Cursor;
+    public MeshRenderer[] XRayMats;
+    [System.NonSerialized] public Data_Rock currentRock;
+    public static MB_PlayerInput input;
 
-    enum Tool
-    { 
-        hammer,
-        drill,
-        none
-    }
+
 
 
     
@@ -22,7 +20,11 @@ public class MB_PlayerInput : MonoBehaviour
     private Tool currentTool = Tool.hammer;
 
     private InputAction useToolAction;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void Awake()
+    {
+        input = this;
+    }
     void Start()
     {
         useToolAction = InputSystem.actions.FindAction("Use");
@@ -95,13 +97,13 @@ public class MB_PlayerInput : MonoBehaviour
         }
     }
 
-    async void UseDrill(float power = .1f)
+    async void UseDrill(float power = .5f)
     {
 
         while(useToolAction.IsPressed())
         {
 
-            Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .1f, rockMask);
+            Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .05f, rockMask);
 
             if (hitRocks.Length > 0)
             {
@@ -119,5 +121,46 @@ public class MB_PlayerInput : MonoBehaviour
 
         
 
+    }
+
+    public void TriggerXRay()
+    {
+        foreach (MeshRenderer mat in XRayMats)
+        {
+            TriggerXRayInternal(mat.material);
+        }
+    }
+
+
+    public async void TriggerXRayInternal(Material mat)
+    {
+        float current = 0;
+        float limit = 8;
+
+        while (current < limit)
+        {
+            current += 0.1f;
+            mat.SetColor("_EmissionColor", Color.white * current);
+            await Task.Yield();
+        }
+
+        while (current > limit / 4)
+        {
+            current -= 0.05f;
+            mat.SetColor("_EmissionColor", Color.white * current);
+            await Task.Yield();
+        }
+
+        while (current > 0)
+        {
+            current -= 0.01f;
+            mat.SetColor("_EmissionColor", Color.white * current);
+            await Task.Yield();
+        }
+    }
+
+    public void SwitchTool(Data_Tool tool)
+    {
+        currentTool = tool.tool;
     }
 }

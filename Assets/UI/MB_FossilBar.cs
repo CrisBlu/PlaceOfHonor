@@ -5,6 +5,7 @@ public class MB_FossilBar : MonoBehaviour
 {
     [SerializeField] Slider CleanBar;
     [SerializeField] Slider DamageBar;
+    [SerializeField] MB_Timer Timer;
     public Data_Rock rockData;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +27,9 @@ public class MB_FossilBar : MonoBehaviour
         Slider bar = damageOrClean ? CleanBar : DamageBar;
 
         bar.value = value;
+
+        if (CleanBar.value + DamageBar.value > .98)
+            Timer.StopAllCoroutines();
     }
 
     public void ResetBar()

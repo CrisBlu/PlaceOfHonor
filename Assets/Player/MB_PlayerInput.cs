@@ -159,8 +159,13 @@ public class MB_PlayerInput : MonoBehaviour
         }
     }
 
-    public void SwitchTool(Data_Tool tool)
+    public void SwitchTool(Data_Tool tool = null)
     {
-        currentTool = tool.tool;
+        if (tool == null)
+            currentTool = Tool.none;
+        else
+            currentTool = tool.tool;
+       
+        
     }
 }

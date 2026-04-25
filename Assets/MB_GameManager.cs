@@ -1,13 +1,17 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MB_GameManager : MonoBehaviour
 {
     [SerializeField] GameObject[] FossilRocks;
     [SerializeField] MB_FossilBar fossilBar;
     [SerializeField] MB_Timer Timer;
+    
+    [SerializeField] Button[] Tools;
     private GameObject currentRock;
     private int i;
+    private bool GameActive;
 
 
     private InputAction nextFossilRock;
@@ -16,6 +20,7 @@ public class MB_GameManager : MonoBehaviour
     void Start()
     {
         i = 0;
+        GameActive = false;
         nextFossilRock = InputSystem.actions.FindAction("NextFossil");
         removeFossilRock = InputSystem.actions.FindAction("RemoveFossil");
 
@@ -31,22 +36,24 @@ public class MB_GameManager : MonoBehaviour
         removeFossilRock.performed -= TakeAwayRock;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void TakeAwayRock(InputAction.CallbackContext context)
     {
         if(currentRock)
         {
+            GameActive = false;
             Destroy(currentRock);
             MB_PlayerInput.input.currentRock = null;
             fossilBar.ResetBar();
             fossilBar.rockData = null;
             currentRock = null;
             Timer.StopAllCoroutines();
+            MB_PlayerInput.input.SwitchTool();
+
+            foreach(Button tool in Tools)
+                tool.interactable = false;
+            
             
         }
         
@@ -56,14 +63,23 @@ public class MB_GameManager : MonoBehaviour
     {
         if (currentRock)
         {
+            GameActive = false;
             Destroy(currentRock);
             MB_PlayerInput.input.currentRock = null;
             fossilBar.ResetBar();
             fossilBar.rockData = null;
             currentRock = null;
             Timer.StopAllCoroutines();
+            MB_PlayerInput.input.SwitchTool();
+
+            foreach (Button tool in Tools)
+                tool.interactable = false;
 
         }
+
+        GameActive = true;
+        foreach (Button tool in Tools)
+            tool.interactable = true;
 
         currentRock = Instantiate(FossilRocks[i]);
         MB_PlayerInput.input.currentRock = currentRock.GetComponent<MB_XRay>().data;
@@ -75,4 +91,5 @@ public class MB_GameManager : MonoBehaviour
         i %= FossilRocks.Length;
 
     }
+    //TODO state where game is over but rock is not away
 }

@@ -1,4 +1,4 @@
-﻿/*using UnityEngine;
+using UnityEngine;
 using VIDE_Data;
 
 public class minUIExample : MonoBehaviour {
@@ -14,7 +14,7 @@ public class minUIExample : MonoBehaviour {
     }
 
     void OnGUI () {
-	    if (VD.isActive)
+        if (VD.isActive)
         {
             var data = VD.nodeData; //Quick reference
             if (data.isPlayer) // If it's a player node, let's show all of the available options as buttons
@@ -35,7 +35,7 @@ public class minUIExample : MonoBehaviour {
                     VD.Next();
                 }
             }
-			if (data.isEnd) // If it's the end, let's just call EndDialogue
+            if (data.isEnd) // If it's the end, let's just call EndDialogue
                 {
                     VD.EndDialogue();
                 }
@@ -46,6 +46,5 @@ public class minUIExample : MonoBehaviour {
                 VD.BeginDialogue(GetComponent<VIDE_Assign>()); //We've attached a VIDE_Assign to this same gameobject, so we just call the component
             }
         }
-	}
+    }
 }
-*/

@@ -14,11 +14,16 @@ public class MB_PlayerInput : MonoBehaviour
     [SerializeField] MB_GameManager Manager;
     [SerializeField] Image XrayTrickSlot;
     [SerializeField] Image XrayFlash;
+    //controlling tool on click audio from this script
+    [SerializeField] AudioClip HamSound;
+    [SerializeField] AudioClip DrilSound;
+    [SerializeField] AudioSource AudioTool;
+    //changing the cursor when tool is picked up
+    [SerializeField] Texture2D[] cursor;
+    //changing the cursor when mousing over the button
 
+    public CursorMode cursorMode = CursorMode.Auto;
 
-
-
-    
     private LayerMask defaultMask;
     private LayerMask rockMask;
     private Tool currentTool = Tool.hammer;
@@ -70,9 +75,11 @@ public class MB_PlayerInput : MonoBehaviour
         {
             case Tool.hammer:
                 UseHammer();
+                AudioTool.PlayOneShot(HamSound);
                 break;
 
             case Tool.drill:
+                AudioTool.PlayOneShot(DrilSound);
                 UseDrill();
                 break;
 
@@ -215,6 +222,20 @@ public class MB_PlayerInput : MonoBehaviour
             currentTool = Tool.none;
         else
             currentTool = tool.tool;
+
+        switch(currentTool)
+        {
+            case Tool.hammer:
+                 //Cursor.SetCursor(cursor[0], new Vector2(0, 0), cursorMode);
+                break;
+
+            case Tool.drill:
+                 //Cursor.SetCursor(cursor[2], new Vector2(0, 0), cursorMode);
+                break;
+
+            case Tool.none:
+                break;
+        }
        
         
     }

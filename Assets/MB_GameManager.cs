@@ -20,6 +20,8 @@ public class MB_GameManager : MonoBehaviour
     [SerializeField] Button[] Tools;
     private GameObject currentRock;
     private int i;
+    private int j;
+    private int[] jValues = { 2, 3, 4 };
     [NonSerialized] public bool GameActive;
 
 
@@ -135,6 +137,8 @@ public class MB_GameManager : MonoBehaviour
         ScoreDisplay.enabled = false;
 
         await Awaitable.WaitForSecondsAsync(1);
+
+        if(i < )
         SpawnNewRock();
     }
 }

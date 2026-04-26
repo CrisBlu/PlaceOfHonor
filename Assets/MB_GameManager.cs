@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -40,43 +41,18 @@ public class MB_GameManager : MonoBehaviour
 
     public void TakeAwayRock(InputAction.CallbackContext context)
     {
-        if(currentRock)
-        {
-            GameActive = false;
-            Destroy(currentRock);
-            MB_PlayerInput.input.currentRock = null;
-            fossilBar.ResetBar();
-            fossilBar.rockData = null;
-            currentRock = null;
-            Timer.StopAllCoroutines();
-            MB_PlayerInput.input.SwitchTool();
+        StopGame();
+        ClearRock();
 
-            foreach(Button tool in Tools)
-                tool.interactable = false;
-            
-            
-        }
-        
+
     }
 
-    public void SpawnNewRock(InputAction.CallbackContext context)
+    public async void SpawnNewRock(InputAction.CallbackContext context)
     {
-        if (currentRock)
-        {
-            GameActive = false;
-            Destroy(currentRock);
-            MB_PlayerInput.input.currentRock = null;
-            fossilBar.ResetBar();
-            fossilBar.rockData = null;
-            currentRock = null;
-            Timer.StopAllCoroutines();
-            MB_PlayerInput.input.SwitchTool();
+        StopGame();
+        ClearRock();
 
-            foreach (Button tool in Tools)
-                tool.interactable = false;
-
-        }
-
+        await Task.Yield();
         GameActive = true;
         foreach (Button tool in Tools)
             tool.interactable = true;
@@ -90,6 +66,33 @@ public class MB_GameManager : MonoBehaviour
         i++;
         i %= FossilRocks.Length;
 
+    }
+
+    public void StopGame()
+    {
+        GameActive = false;
+        Timer.StopAllCoroutines();
+        foreach (Button tool in Tools)
+            tool.interactable = false;
+
+        MB_PlayerInput.input.SwitchTool();
+    }
+
+
+    void ClearRock()
+    {
+        if (currentRock)
+        {
+            currentRock.GetComponent<MB_XRay>().data.totalRocksOverFossil = 0;
+            Destroy(currentRock);
+            MB_PlayerInput.input.currentRock = null;
+            fossilBar.ResetBar();
+            fossilBar.rockData = null;
+            currentRock = null;
+            
+
+
+        }
     }
     //TODO state where game is over but rock is not away
 }

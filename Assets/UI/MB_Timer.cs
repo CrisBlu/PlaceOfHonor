@@ -6,6 +6,7 @@ public class MB_Timer : MonoBehaviour
 {
     [SerializeField] int TimerSeconds;
     [SerializeField] TMPro.TextMeshProUGUI timer;
+    [SerializeField] MB_GameManager manager;
     private int timerValue;
 
 
@@ -32,5 +33,7 @@ public class MB_Timer : MonoBehaviour
             timer.text = string.Format("{0:0}:{1:00}", minutes, seconds);
             yield return new WaitForSeconds(1f);
         }
+
+        manager.StopGame();
     }
 }

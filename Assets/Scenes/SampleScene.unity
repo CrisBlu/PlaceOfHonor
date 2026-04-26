@@ -446,8 +446,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1142,6 +1142,10 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 1442257047}
+    - target: {fileID: 4935728021923486046, guid: 8a139ad7a43282f4f9bc389147291d4f, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 740548495}
     - target: {fileID: 5253825414608989233, guid: 8a139ad7a43282f4f9bc389147291d4f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1652,6 +1656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimerSeconds: 91
   timer: {fileID: 666908893}
+  manager: {fileID: 0}
 --- !u!1 &1546986372
 GameObject:
   m_ObjectHideFlags: 0

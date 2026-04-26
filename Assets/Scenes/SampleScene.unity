@@ -350,6 +350,324 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &138045926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138045927}
+  - component: {fileID: 138045928}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &138045927
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138045926}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1695701007}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138045928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138045926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - demo_Narration
+  - Example3Dialogue
+  - Example4_dialogue
+  - HonorLog
+  - HonorLog2
+  - HonorLog3
+  - Item_LookUp
+  - Laura
+  - MrCube
+  - NPCOnly
+  - QuestChartDemo
+  - TriggeredDude
+  - Witch
+  assignedIndex: 9
+  assignedID: 1609
+  assignedDialogue: HonorLog3
+  interactionCount: 0
+  alias: 
+  overrideStartNode: 0
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
+  targetManager: {fileID: 0}
+  preload: 1
+  notuptodate: 0
+  startp: 0
+  loadtag: 
+  langs: []
+  S_playerDiags:
+  - commentCount: 1
+    s_comment:
+    - text: You smell feces and blood from behind the door.
+      extraData: ExtraData
+      inputSetIndex: 0
+      outputNodeIndex: 1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 0
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Leave the room!
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 2
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Continue Working...
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 3
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 1
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: You do not move.
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: 5
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: You're insane.
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 4
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 3
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Continue Working.
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 11
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 4
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 2
+    s_comment:
+    - text: Leave the room!
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: 6
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Continue Working...
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: 3
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 5
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: 'You know what you''ll find out there. '
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: 7
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 6
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Leave the room!
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: 8
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Continue Working...
+      extraData: ExtraData
+      inputSetIndex: 7
+      outputNodeIndex: 9
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 7
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: What... what will you find out there? What is that smell anyway?
+      extraData: ExtraData
+      inputSetIndex: 8
+      outputNodeIndex: 10
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 8
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 3
+    s_comment:
+    - text: ' You stare at the lump of debris on your work station and your tools.'
+      extraData: ExtraData
+      inputSetIndex: 9
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: That's right...
+      extraData: ExtraData
+      inputSetIndex: 9
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Nothing else is more important.
+      extraData: ExtraData
+      inputSetIndex: 9
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 9
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: Continue Working.
+      extraData: ExtraData
+      inputSetIndex: 10
+      outputNodeIndex: 9
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 10
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 2
+    s_comment:
+    - text: You must continue working.
+      extraData: ExtraData
+      inputSetIndex: 11
+      outputNodeIndex: 9
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: You must continue uncovering.
+      extraData: ExtraData
+      inputSetIndex: 11
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 11
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  S_actionNodes: []
 --- !u!1 &278753249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1504,151 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503415626}
   m_CullTransparentMesh: 1
+--- !u!1 &515369117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515369120}
+  - component: {fileID: 515369119}
+  - component: {fileID: 515369118}
+  m_Layer: 0
+  m_Name: GrossSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &515369118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515369117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a119170daf90ad4faa50ee209cce001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  source: {fileID: 515369119}
+  grossClip: {fileID: 8300000, guid: 982b5131786bfda45860e1bf7a5b985f, type: 3}
+  uIManager: {fileID: 1695701006}
+--- !u!82 &515369119
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515369117}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &515369120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515369117}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1483.976, y: 736.6476, z: -30.168829}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &515537938 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6431986895700718338, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
@@ -1412,6 +1875,7 @@ MonoBehaviour:
   DoorOpen: {fileID: 8300000, guid: 0330e4fd0eb2b41c990692da0260c907, type: 3}
   DoorClosed: {fileID: 8300000, guid: 26f1ef493342042a68d02f3fca85f053, type: 3}
   AudioSourceOk: {fileID: 1838562345}
+  uiManager: {fileID: 0}
   Tools:
   - {fileID: 54933636}
   - {fileID: 503415628}
@@ -3047,12 +3511,389 @@ PrefabInstance:
       value: HonorLog
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: overrideStartNode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_actionNodes.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].ID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].ID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].ID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].ID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].ID
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[6].ID
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[7].ID
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].ID
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[9].ID
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[10].ID
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].pTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[6].pTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[7].pTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].pTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[9].pTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[10].pTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[11].pTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[11].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].commentCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].commentCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].commentCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].commentCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].commentCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].commentCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[11].commentCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].vars.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].vars.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[11].vars.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].varKeys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].varKeys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[11].varKeys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].s_comment.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[11].s_comment.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].text
+      value: "Here\u2019s what we found today. Another load of useless junk. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].text
+      value: "Wish they\u2019d stop sending us out there, I swear it\u2019s the same
+        old dig site from yesterday."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].text
+      value: I thought you liked getting out of the facility.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].text
+      value: Might be junk to you, but some of this stuff could prove interesting...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].text
+      value: "No I mean, I\u2019m really sure we've completely cleaned out this dig
+        site. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[1].text
+      value: I can't understand what they still want with this place.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].text
+      value: "The soil\u2019s real bad too. Worst I\u2019ve ever seen. Not a single
+        living thing exists in this dirt.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].text
+      value: Well, it's a good thing we're not farmers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].text
+      value: Then what are we? What are we even doing here?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[0].text
+      value: You dig, I clean, that's all we need to know to do the job.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[1].text
+      value: We'll figure it out eventually... I'm sure of it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[6].s_comment.Array.data[0].text
+      value: What even is our job? What is this all for? Why do we keep digging?
+        Why do we keep cleaning this junk? What are we even lookin-
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[7].s_comment.Array.data[0].text
+      value: Interesting for them maybe, I doubt they'd bother to let us know if
+        we dug up anything valuable.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].s_comment.Array.data[0].text
+      value: It's in our contract, so I have to believe they will.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].s_comment.Array.data[1].text
+      value: I'll figure it out myself if I have to.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[9].s_comment.Array.data[0].text
+      value: Our contracts are worthless and you know it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[10].s_comment.Array.data[0].text
+      value: Might as well come outside and pick one of these holes to die in.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[11].s_comment.Array.data[0].text
+      value: "Go get some rest, you\u2019ve done your job now let me do mine."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].visible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[1].visible
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[1].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[1].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].outputNodeIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[11].s_comment.Array.data[0].outActionIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].outputNodeIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].outputNodeIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[2].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].outputNodeIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].outputNodeIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[1].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[1].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[2].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[0].outputNodeIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[1].outputNodeIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[6].s_comment.Array.data[0].outputNodeIndex
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[7].s_comment.Array.data[0].outputNodeIndex
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].s_comment.Array.data[0].outputNodeIndex
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].s_comment.Array.data[1].outputNodeIndex
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[9].s_comment.Array.data[0].outputNodeIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[10].s_comment.Array.data[0].outputNodeIndex
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: NPC_Text
@@ -3075,9 +3916,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2114675722}
     - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: vide.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: dialogueContainer
       value: 
       objectReference: {fileID: 934145286}
+    - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: 'vide.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1695701008}
+    - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: 'vide.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1921293398}
+    - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: 'vide.Array.data[2]'
+      value: 
+      objectReference: {fileID: 138045928}
     - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: 'maxPlayerChoices.Array.data[0]'
       value: 
@@ -3096,9 +3953,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5519088572148844156, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1921293397}
+    - targetCorrespondingSourceObject: {fileID: 5519088572148844156, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 138045927}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+--- !u!114 &1695701006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+  m_PrefabInstance: {fileID: 1695701005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77d6d335b46cb642b513b40738603f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1695701007 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5519088572148844156, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+  m_PrefabInstance: {fileID: 1695701005}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1695701008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+  m_PrefabInstance: {fileID: 1695701005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1750360409
 GameObject:
   m_ObjectHideFlags: 0
@@ -3361,6 +4251,230 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1921293396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1921293397}
+  - component: {fileID: 1921293398}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1921293397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921293396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1695701007}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1921293398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921293396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - demo_Narration
+  - Example3Dialogue
+  - Example4_dialogue
+  - HonorLog
+  - HonorLog2
+  - HonorLog3
+  - Item_LookUp
+  - Laura
+  - MrCube
+  - NPCOnly
+  - QuestChartDemo
+  - TriggeredDude
+  - Witch
+  assignedIndex: 8
+  assignedID: 54291
+  assignedDialogue: HonorLog2
+  interactionCount: 0
+  alias: 
+  overrideStartNode: 0
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
+  targetManager: {fileID: 0}
+  preload: 1
+  notuptodate: 0
+  startp: 0
+  loadtag: 
+  langs: []
+  S_playerDiags:
+  - commentCount: 1
+    s_comment:
+    - text: "Here\u2019s the new stuff we found today."
+      extraData: ExtraData
+      inputSetIndex: 0
+      outputNodeIndex: 1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 0
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: Are you doing okay?
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: 2
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: You sound sick.
+      extraData: ExtraData
+      inputSetIndex: 1
+      outputNodeIndex: -1
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 1
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "Ever since I got back from yesterday\u2019s dig site my stomach\u2019s
+        been killing me. I\u2019m surprised I even came back in one piece, everything\u2019s
+        been spinning since lunch."
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: 3
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 2
+    s_comment:
+    - text: "Why don\u2019t you go to the med bay?"
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 4
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: Lots of people have reported stomach pain in the past couple of days,
+        you probably just ate something bad.
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 6
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 3
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: "It\u2019s full. I think everyone on the other dig team got food poisoning."
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 5
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 4
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: "Everyone? That doesn\u2019t sound right"
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: -1
+      outActionIndex: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 5
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: I-I'm not sure about that, we don't share meals with the other dig team
+        and everyone from there is also sick.
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: 5
+      outActionIndex: -1
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 6
+    pTag: 
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  S_actionNodes:
+  - pauseHere: 0
+    gameObjectName: GrossSound
+    methodName: PlayGrossSound
+    paramType: 0
+    gotoNode: -1
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    ID: 7
+    outPlayerIndex: -1
+    outActionIndex: -1
+    ovrStartNode: -1
+    renameDialogue: 
 --- !u!1 &2004070289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3530,3 +4644,4 @@ SceneRoots:
   - {fileID: 1377137171}
   - {fileID: 317019353}
   - {fileID: 963539672}
+  - {fileID: 515369120}

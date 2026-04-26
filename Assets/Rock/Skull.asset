@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3894ee2e84194a34da35faaf7488d85d, type: 3}
-  m_Name: Hand
+  m_Name: Skull
   m_EditorClassIdentifier: 
   LAYERHP:
   - 100
@@ -22,6 +22,9 @@ MonoBehaviour:
   - {r: 0.8196079, g: 0.5803922, b: 0.10196079, a: 1}
   - {r: 0.8196079, g: 0.7568628, b: 0.50980395, a: 1}
   - {r: 1, g: 1, b: 1, a: 0}
-  totalRocksOverFossil: 0
+  IsThereAnXRayTrick: 1
+  XRayTrick: 0
+  XRayTrickImage: {fileID: 21300000, guid: 6c9651b406ae3f54fa5e229b7eae8348, type: 3}
+  totalRocksOverFossil: 90
   fossilReveal: 0
   fossilDamaged: 0

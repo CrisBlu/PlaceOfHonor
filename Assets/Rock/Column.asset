@@ -14,11 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LAYERHP:
   - 100
-  - 100
-  - 100
-  - 10
+  - 70
+  - 20
+  - 40
   LAYERCOLOR:
   - {r: 0.5137255, g: 0.22352943, b: 0, a: 1}
   - {r: 0.8196079, g: 0.5803922, b: 0.10196079, a: 1}
   - {r: 0.8196079, g: 0.7568628, b: 0.50980395, a: 1}
   - {r: 1, g: 1, b: 1, a: 0}
+  totalRocksOverFossil: 0
+  fossilReveal: 0
+  fossilDamaged: 0

@@ -1,8 +1,8 @@
 using System;
 using System.Threading.Tasks;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class MB_GameManager : MonoBehaviour
@@ -12,6 +12,7 @@ public class MB_GameManager : MonoBehaviour
     [SerializeField] Animator doorAnimator;
     [SerializeField] MB_Timer Timer;
     [SerializeField] Data_Scoring Scoring;
+    [SerializeField] TextMeshProUGUI ScoreDisplay;
 
     
     [SerializeField] Button[] Tools;
@@ -90,6 +91,8 @@ public class MB_GameManager : MonoBehaviour
         MB_PlayerInput.input.SwitchTool();
 
         Scoring.scores.Add(fossilBar.score);
+
+        ShowScore(fossilBar.score);
     }
 
 
@@ -108,5 +111,18 @@ public class MB_GameManager : MonoBehaviour
 
         }
     }
-    //TODO state where game is over but rock is not away
+    
+
+    async void ShowScore(float score)
+    {
+        await Awaitable.WaitForSecondsAsync(.5f);
+
+        ScoreDisplay.text = ((int)(score * 100)).ToString() + '%';
+        ScoreDisplay.enabled = true;
+        
+
+        await Awaitable.WaitForSecondsAsync(4);
+
+        ScoreDisplay.enabled = false;
+    }
 }

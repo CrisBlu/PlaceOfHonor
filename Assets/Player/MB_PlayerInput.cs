@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MB_PlayerInput : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class MB_PlayerInput : MonoBehaviour
     [System.NonSerialized] public Data_Rock currentRock;
     public static MB_PlayerInput input;
     [SerializeField] MB_GameManager Manager;
+    [SerializeField] Image XrayTrickSlot;
+    [SerializeField] Image XrayFlash;
 
 
 
@@ -95,12 +98,18 @@ public class MB_PlayerInput : MonoBehaviour
         {
             if (!Manager.GameActive)
                 break;
-            //float powerAfterFalloff = 
-            rock.GetComponent<MB_Rock>().TakeDamage(power, layerStruck);
+            float powerAfterFalloff = power - Vector3.Distance(Cursor.position, rock.transform.position);
+            if (powerAfterFalloff <= 0)
+            {
+                powerAfterFalloff = 1f;
+                Debug.Log("Power was less than or 0");
+            }
+                
+            rock.GetComponent<MB_Rock>().TakeDamage(powerAfterFalloff, layerStruck);
         }
     }
 
-    async void UseDrill(float power = .5f)
+    async void UseDrill(float power = 1f)
     {
 
         while(useToolAction.IsPressed())
@@ -114,9 +123,15 @@ public class MB_PlayerInput : MonoBehaviour
 
                 foreach (Collider rock in hitRocks)
                 {
-                    //float powerAfterFalloff = 
+                    if (!Manager.GameActive)
+                        break;
+
                     rock.GetComponent<MB_Rock>().TakeDamage(power, layerStruck);
+
                 }
+
+                
+                
             }
             await Task.Yield();
 
@@ -128,12 +143,44 @@ public class MB_PlayerInput : MonoBehaviour
 
     public void TriggerXRay()
     {
+        TriggerXRayImage(XrayFlash, .0125f);
+
+        if (currentRock.XRayTrick)
+        {
+            XrayTrickSlot.sprite = currentRock.XRayTrickImage;
+            TriggerXRayImage(XrayTrickSlot);
+            currentRock.XRayTrick = false;
+            return;
+
+        }
+
+
         foreach (MeshRenderer mat in XRayMats)
         {
             TriggerXRayInternal(mat.material);
         }
     }
 
+    public async void TriggerXRayImage(Image slot, float fadePower = .1f)
+    {
+        float current = 0;
+        float limit = 1;
+
+        while (current < limit)
+        {
+            current += 0.1f;
+            slot.color = new Color(1, 1, 1, current);
+            await Task.Yield();
+        }
+
+
+        while (current > 0)
+        {
+            current -= fadePower;
+            slot.color = new Color(1, 1, 1, current);
+            await Task.Yield();
+        }
+    }
 
     public async void TriggerXRayInternal(Material mat)
     {

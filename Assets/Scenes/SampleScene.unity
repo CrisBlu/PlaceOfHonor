@@ -3135,6 +3135,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: vide
+      value: 
+      objectReference: {fileID: 912728720}
+    - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: NPC_Text
       value: 
       objectReference: {fileID: 941185660}

@@ -7,18 +7,24 @@ using UnityEngine.UI;
 public class MB_PlayerInput : MonoBehaviour
 {
     [SerializeField] Camera SceneCamera;
-    [SerializeField] Transform Cursor;
+    [SerializeField] Transform mousePos;
     public MeshRenderer[] XRayMats;
     [System.NonSerialized] public Data_Rock currentRock;
     public static MB_PlayerInput input;
     [SerializeField] MB_GameManager Manager;
     [SerializeField] Image XrayTrickSlot;
     [SerializeField] Image XrayFlash;
+    //controlling tool on click audio from this script
+    [SerializeField] AudioClip HamSound;
+    [SerializeField] AudioClip DrilSound;
+    [SerializeField] AudioClip RaySound;
+    [SerializeField] AudioSource AudioTool;
+    //changing the cursor when tool is picked up
+    [SerializeField] Texture2D[] cursor;
+    //changing the cursor when mousing over the button
 
+    public CursorMode cursorMode = CursorMode.Auto;
 
-
-
-    
     private LayerMask defaultMask;
     private LayerMask rockMask;
     private Tool currentTool = Tool.hammer;
@@ -43,7 +49,7 @@ public class MB_PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.position = PositionFromMouse(SceneCamera);
+        mousePos.position = PositionFromMouse(SceneCamera);
     }
 
 
@@ -64,16 +70,24 @@ public class MB_PlayerInput : MonoBehaviour
         return new Vector3(999, 999, 999);
     }
 
-    void UseTool(InputAction.CallbackContext context)
+    async void UseTool(InputAction.CallbackContext context)
     {
         switch(currentTool)
         {
             case Tool.hammer:
                 UseHammer();
+                AudioTool.PlayOneShot(HamSound);
+                Cursor.SetCursor(cursor[1], new Vector2(0, 0), cursorMode);
+                await Awaitable.WaitForSecondsAsync(.5f);
+                Cursor.SetCursor(cursor[0], new Vector2(0, 0), cursorMode);
                 break;
 
             case Tool.drill:
+                AudioTool.PlayOneShot(DrilSound);
                 UseDrill();
+                Cursor.SetCursor(cursor[3], new Vector2(0, 0), cursorMode);
+                await Awaitable.WaitForSecondsAsync(.5f);
+                Cursor.SetCursor(cursor[2], new Vector2(0, 0), cursorMode);
                 break;
 
             case Tool.none:
@@ -87,7 +101,7 @@ public class MB_PlayerInput : MonoBehaviour
 
     void UseHammer(float power = 40f)
     {
-        Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .5f, rockMask);
+        Collider[] hitRocks = Physics.OverlapSphere(mousePos.position, .5f, rockMask);
 
         if (hitRocks.Length <= 0)
         { return; }
@@ -98,7 +112,7 @@ public class MB_PlayerInput : MonoBehaviour
         {
             if (!Manager.GameActive)
                 break;
-            float powerAfterFalloff = power - Vector3.Distance(Cursor.position, rock.transform.position);
+            float powerAfterFalloff = power - Vector3.Distance(mousePos.position, rock.transform.position);
             if (powerAfterFalloff <= 0)
             {
                 powerAfterFalloff = 1f;
@@ -115,7 +129,7 @@ public class MB_PlayerInput : MonoBehaviour
         while(useToolAction.IsPressed())
         {
 
-            Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .05f, rockMask);
+            Collider[] hitRocks = Physics.OverlapSphere(mousePos.position, .05f, rockMask);
 
             if (hitRocks.Length > 0)
             {
@@ -144,6 +158,7 @@ public class MB_PlayerInput : MonoBehaviour
     public void TriggerXRay()
     {
         TriggerXRayImage(XrayFlash, .0125f);
+        AudioTool.PlayOneShot(RaySound);
 
         if (currentRock.XRayTrick)
         {
@@ -215,6 +230,20 @@ public class MB_PlayerInput : MonoBehaviour
             currentTool = Tool.none;
         else
             currentTool = tool.tool;
+
+        switch(currentTool)
+        {
+            case Tool.hammer:
+                 Cursor.SetCursor(cursor[0], new Vector2(0, 0), cursorMode);
+                break;
+
+            case Tool.drill:
+                 Cursor.SetCursor(cursor[2], new Vector2(0, 0), cursorMode);
+                break;
+
+            case Tool.none:
+                break;
+        }
        
         
     }

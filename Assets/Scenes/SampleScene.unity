@@ -1330,6 +1330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 4934091957676203565, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4498261366915636930, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
@@ -1636,7 +1640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1711,7 +1715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2617,12 +2621,242 @@ PrefabInstance:
       value: HonorLog
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: overrideStartNode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_actionNodes.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.size
-      value: 6
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].ID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].ID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].ID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].ID
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].ID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].ID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].pTag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].commentCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].commentCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].commentCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].vars.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].vars.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].varKeys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].varKeys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].text
+      value: "Here\u2019s what we found today. Another load of useless junk. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].text
+      value: "Wish they\u2019d stop sending us out there, I swear it\u2019s the same
+        old dig site from yesterday."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].text
+      value: I thought you liked getting out of the facility.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].text
+      value: Might be junk to you, but some of this stuff could prove interesting
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].text
+      value: "No I mean, I\u2019m really sure we already finished this dig site.
+        It\u2019s the same soil."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[1].text
+      value: 'I don''t understand what they want with this site anyway. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].text
+      value: Interesting to them maybe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[1].text
+      value: ' I doubt they''ll bother to let us know if we dig up anything valuable.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].text
+      value: Comment...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[0].text
+      value: Comment...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[1].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[1].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].extraData
+      value: ExtraData
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].inputSetIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].outActionIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[2].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[2].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[1].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[1].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[2].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[0].outputNodeIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[6].s_comment.Array.data[0].outputNodeIndex
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: NPC_Text
@@ -2632,6 +2866,10 @@ PrefabInstance:
       propertyPath: NPC_label
       value: 
       objectReference: {fileID: 515537938}
+    - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: playerLabel
       value: 
@@ -2663,6 +2901,10 @@ PrefabInstance:
     - target: {fileID: 9179527391711432891, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: m_Name
       value: UIMANAGER
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179527391711432891, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

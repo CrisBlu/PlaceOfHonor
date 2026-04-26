@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 54933638}
   - component: {fileID: 54933637}
   - component: {fileID: 54933636}
+  - component: {fileID: 54933639}
   m_Layer: 5
   m_Name: Hammah
   m_TagString: Untagged
@@ -197,7 +198,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 54933637}
   m_OnClick:
     m_PersistentCalls:
@@ -264,6 +265,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54933634}
   m_CullTransparentMesh: 1
+--- !u!114 &54933639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54933634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - demo_Narration
+  - Example3Dialogue
+  - Example4_dialogue
+  - HonorLog
+  - HonorLog2
+  - HonorLog3
+  - Item_LookUp
+  - Laura
+  - MrCube
+  - NPCOnly
+  - QuestChartDemo
+  - TriggeredDude
+  - Witch
+  assignedIndex: 7
+  assignedID: 64429
+  assignedDialogue: HonorLog
+  interactionCount: 0
+  alias: 
+  overrideStartNode: -1
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
+  targetManager: {fileID: 0}
+  preload: 0
+  notuptodate: 0
+  startp: 0
+  loadtag: 
+  langs: []
+  S_playerDiags: []
+  S_actionNodes: []
 --- !u!1 &73618340
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +469,7 @@ MonoBehaviour:
   defaultPlayerSprite: {fileID: 0}
   targetManager: {fileID: 0}
   preload: 1
-  notuptodate: 0
+  notuptodate: 1
   startp: 0
   loadtag: 
   langs: []
@@ -1449,7 +1496,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 503415629}
   m_OnClick:
     m_PersistentCalls:
@@ -1993,6 +2040,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1442257046}
     m_Modifications:
+    - target: {fileID: 180481373784345859, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 180481373784345859, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695701006}
+    - target: {fileID: 180481373784345859, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 180481373784345859, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Template_UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 180481373784345859, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1695701008}
+    - target: {fileID: 180481373784345859, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: VIDE_Assign, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3206093628988813631, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2084,6 +2155,54 @@ PrefabInstance:
     - target: {fileID: 4934091957676203565, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
       propertyPath: m_Name
       value: Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329920502867511926, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329920502867511926, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695701006}
+    - target: {fileID: 5329920502867511926, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329920502867511926, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Template_UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329920502867511926, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1695701008}
+    - target: {fileID: 5329920502867511926, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: VIDE_Assign, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518660609703311750, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518660609703311750, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1695701006}
+    - target: {fileID: 7518660609703311750, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518660609703311750, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Template_UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7518660609703311750, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1695701008}
+    - target: {fileID: 7518660609703311750, guid: cea438b4a82145645ba9fc3fe82a3efa, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: VIDE_Assign, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -3524,47 +3643,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[0].ID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[1].ID
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[2].ID
+      propertyPath: S_playerDiags.Array.data[1].ID
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[3].ID
+      propertyPath: S_playerDiags.Array.data[2].ID
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[4].ID
+      propertyPath: S_playerDiags.Array.data[3].ID
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[5].ID
+      propertyPath: S_playerDiags.Array.data[4].ID
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[6].ID
+      propertyPath: S_playerDiags.Array.data[5].ID
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[7].ID
+      propertyPath: S_playerDiags.Array.data[6].ID
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[8].ID
+      propertyPath: S_playerDiags.Array.data[7].ID
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[9].ID
+      propertyPath: S_playerDiags.Array.data[8].ID
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[10].ID
+      propertyPath: S_playerDiags.Array.data[9].ID
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[10].ID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[5].pTag
@@ -3599,7 +3718,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[2].isPlayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[3].isPlayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
@@ -3608,6 +3735,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[5].isPlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[7].isPlayer
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
@@ -3624,7 +3755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[2].commentCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[3].commentCount
@@ -3632,14 +3763,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[4].commentCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[5].commentCount
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[7].commentCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[8].commentCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[10].commentCount
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
@@ -3676,7 +3815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[2].s_comment.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[3].s_comment.Array.size
@@ -3684,14 +3823,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[4].s_comment.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[5].s_comment.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[7].s_comment.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[8].s_comment.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[10].s_comment.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
@@ -3700,25 +3847,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[0].text
-      value: "Here\u2019s what we found today. Another load of useless junk. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].text
-      value: "Wish they\u2019d stop sending us out there, I swear it\u2019s the same
-        old dig site from yesterday."
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].text
       value: I thought you liked getting out of the facility.
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].text
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].text
       value: Might be junk to you, but some of this stuff could prove interesting...
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].text
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[0].text
       value: "No I mean, I\u2019m really sure we've completely cleaned out this dig
         site. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].text
+      value: I can't understand what they still want with this place.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[0].text
+      value: Well, it's a good thing we're not farmers.
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[2].s_comment.Array.data[1].text
@@ -3731,15 +3877,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[3].s_comment.Array.data[0].text
-      value: Well, it's a good thing we're not farmers.
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].text
       value: Then what are we? What are we even doing here?
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[0].text
+      propertyPath: S_playerDiags.Array.data[4].s_comment.Array.data[0].text
       value: You dig, I clean, that's all we need to know to do the job.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[0].text
+      value: What even is our job? What is this all for? Why do we keep digging?
+        Why do we keep cleaning this junk? What are we even lookin-
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[1].text
@@ -3747,17 +3894,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[6].s_comment.Array.data[0].text
-      value: What even is our job? What is this all for? Why do we keep digging?
-        Why do we keep cleaning this junk? What are we even lookin-
-      objectReference: {fileID: 0}
-    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[7].s_comment.Array.data[0].text
       value: Interesting for them maybe, I doubt they'd bother to let us know if
         we dug up anything valuable.
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
-      propertyPath: S_playerDiags.Array.data[8].s_comment.Array.data[0].text
+      propertyPath: S_playerDiags.Array.data[7].s_comment.Array.data[0].text
       value: It's in our contract, so I have to believe they will.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[8].s_comment.Array.data[0].text
+      value: Our contracts are worthless and you know it!
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[8].s_comment.Array.data[1].text
@@ -3765,11 +3911,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[9].s_comment.Array.data[0].text
-      value: Our contracts are worthless and you know it!
+      value: Might as well come outside and pick one of these holes to die in.
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[10].s_comment.Array.data[0].text
-      value: Might as well come outside and pick one of these holes to die in.
+      value: "Here\u2019s what we found today. Another load of useless junk."
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[11].s_comment.Array.data[0].text
@@ -3828,6 +3974,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
+      propertyPath: S_playerDiags.Array.data[0].s_comment.Array.data[1].outputNodeIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[11].s_comment.Array.data[0].outActionIndex
       value: 0
       objectReference: {fileID: 0}
@@ -3837,7 +3987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[1].outputNodeIndex
-      value: 7
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[1].s_comment.Array.data[2].outputNodeIndex
@@ -3865,7 +4015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[0].outputNodeIndex
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[5].s_comment.Array.data[1].outputNodeIndex
@@ -3873,7 +4023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[6].s_comment.Array.data[0].outputNodeIndex
-      value: 11
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[7].s_comment.Array.data[0].outputNodeIndex
@@ -3881,7 +4031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[8].s_comment.Array.data[0].outputNodeIndex
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[8].s_comment.Array.data[1].outputNodeIndex
@@ -3889,11 +4039,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[9].s_comment.Array.data[0].outputNodeIndex
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7872082951586697217, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: S_playerDiags.Array.data[10].s_comment.Array.data[0].outputNodeIndex
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8952920366913099479, guid: a8cf2cedcc2a7d3408f5f31d15be421a, type: 3}
       propertyPath: NPC_Text
@@ -4323,7 +4473,7 @@ MonoBehaviour:
   defaultPlayerSprite: {fileID: 0}
   targetManager: {fileID: 0}
   preload: 1
-  notuptodate: 0
+  notuptodate: 1
   startp: 0
   loadtag: 
   langs: []

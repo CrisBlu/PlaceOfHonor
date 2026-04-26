@@ -518,7 +518,7 @@ public class VIDE_Assign : MonoBehaviour, ISerializationCallbackReceiver
             {
                 playerDiags[i].comment[ii].inputSet = playerDiags[i];
 
-                if (S_playerDiags[i].s_comment[ii].outputNodeIndex >= 0 && S_playerDiags[i].s_comment[ii].outputNodeIndex != 13)
+                if (S_playerDiags[i].s_comment[ii].outputNodeIndex >= 0)
                     playerDiags[i].comment[ii].outNode = playerDiags[S_playerDiags[i].s_comment[ii].outputNodeIndex];
                 else
                     playerDiags[i].comment[ii].outNode = null;

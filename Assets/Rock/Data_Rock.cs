@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System.Threading.Tasks;
 
 [CreateAssetMenu(fileName = "Data_Rock", menuName = "Scriptable Objects/Data_Rock")]
 public class Data_Rock : ScriptableObject
@@ -7,6 +8,7 @@ public class Data_Rock : ScriptableObject
     [SerializeField] public float[] LAYERHP;
     [SerializeField] public Color[] LAYERCOLOR;
     [System.NonSerialized] public UnityEvent<float, bool> Event_ShiftFossilBar;
+    [System.NonSerialized] public GameObject FOSSIL;
 
     public int totalRocksOverFossil;
     public int fossilReveal;
@@ -21,7 +23,9 @@ public class Data_Rock : ScriptableObject
         totalRocksOverFossil = 0;
         fossilReveal = 0;
         fossilDamaged = 0;
+
     }
+
 
     private void OnDisable()
     {
@@ -46,7 +50,9 @@ public class Data_Rock : ScriptableObject
 
     }
 
-    
+
+
+
 
 
 }

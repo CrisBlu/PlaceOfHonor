@@ -370,6 +370,7 @@ MonoBehaviour:
   SceneCamera: {fileID: 330585545}
   Cursor: {fileID: 73618344}
   XRayMats: []
+  Manager: {fileID: 740548495}
 --- !u!4 &278753251
 Transform:
   m_ObjectHideFlags: 0
@@ -1071,6 +1072,7 @@ MonoBehaviour:
   fossilBar: {fileID: 1442257042}
   doorAnimator: {fileID: 823641022}
   Timer: {fileID: 1442257047}
+  Scoring: {fileID: 11400000, guid: ea65b7c6b980dc940a3c404224668eeb, type: 2}
   Tools:
   - {fileID: 54933636}
   - {fileID: 503415628}

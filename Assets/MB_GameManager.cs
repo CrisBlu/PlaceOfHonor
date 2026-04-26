@@ -16,6 +16,7 @@ public class MB_GameManager : MonoBehaviour
     [SerializeField] AudioClip DoorOpen;
     [SerializeField] AudioClip DoorClosed;
     [SerializeField] AudioSource AudioSourceOk;
+    [SerializeField] Template_UIManager uiManager;
     
     [SerializeField] Button[] Tools;
     private GameObject currentRock;
@@ -31,6 +32,7 @@ public class MB_GameManager : MonoBehaviour
     void Start()
     {
         i = 0;
+        j = 0;
         GameActive = false;
         nextFossilRock = InputSystem.actions.FindAction("NextFossil");
         removeFossilRock = InputSystem.actions.FindAction("RemoveFossil");
@@ -138,7 +140,14 @@ public class MB_GameManager : MonoBehaviour
 
         await Awaitable.WaitForSecondsAsync(1);
 
-        if(i < )
-        SpawnNewRock();
+        if(i < jValues[j])
+            SpawnNewRock();
+        else
+        {
+            j++;
+            uiManager.Interact(uiManager.vide[1]);
+        }
+            
+        
     }
 }

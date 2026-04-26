@@ -17,6 +17,7 @@ public class MB_PlayerInput : MonoBehaviour
     //controlling tool on click audio from this script
     [SerializeField] AudioClip HamSound;
     [SerializeField] AudioClip DrilSound;
+    [SerializeField] AudioClip RaySound;
     [SerializeField] AudioSource AudioTool;
     //changing the cursor when tool is picked up
     [SerializeField] Texture2D[] cursor;
@@ -69,18 +70,24 @@ public class MB_PlayerInput : MonoBehaviour
         return new Vector3(999, 999, 999);
     }
 
-    void UseTool(InputAction.CallbackContext context)
+    async void UseTool(InputAction.CallbackContext context)
     {
         switch(currentTool)
         {
             case Tool.hammer:
                 UseHammer();
                 AudioTool.PlayOneShot(HamSound);
+                Cursor.SetCursor(cursor[1], new Vector2(0, 0), cursorMode);
+                await Awaitable.WaitForSecondsAsync(.5f);
+                Cursor.SetCursor(cursor[0], new Vector2(0, 0), cursorMode);
                 break;
 
             case Tool.drill:
                 AudioTool.PlayOneShot(DrilSound);
                 UseDrill();
+                Cursor.SetCursor(cursor[3], new Vector2(0, 0), cursorMode);
+                await Awaitable.WaitForSecondsAsync(.5f);
+                Cursor.SetCursor(cursor[2], new Vector2(0, 0), cursorMode);
                 break;
 
             case Tool.none:
@@ -151,6 +158,7 @@ public class MB_PlayerInput : MonoBehaviour
     public void TriggerXRay()
     {
         TriggerXRayImage(XrayFlash, .0125f);
+        AudioTool.PlayOneShot(RaySound);
 
         if (currentRock.XRayTrick)
         {

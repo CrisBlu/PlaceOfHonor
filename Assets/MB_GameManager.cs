@@ -13,7 +13,9 @@ public class MB_GameManager : MonoBehaviour
     [SerializeField] MB_Timer Timer;
     [SerializeField] Data_Scoring Scoring;
     [SerializeField] TextMeshProUGUI ScoreDisplay;
-
+    [SerializeField] AudioClip DoorOpen;
+    [SerializeField] AudioClip DoorClosed;
+    [SerializeField] AudioSource AudioSourceOk;
     
     [SerializeField] Button[] Tools;
     private GameObject currentRock;
@@ -72,6 +74,7 @@ public class MB_GameManager : MonoBehaviour
             tool.interactable = true;
 
         doorAnimator.SetBool("GameActive", GameActive);
+        AudioSourceOk.PlayOneShot(DoorOpen);
         currentRock = Instantiate(FossilRocks[i]);
         MB_PlayerInput.input.currentRock = currentRock.GetComponent<MB_XRay>().data;
         fossilBar.rockData = currentRock.GetComponent<MB_XRay>().data;
@@ -85,12 +88,13 @@ public class MB_GameManager : MonoBehaviour
 
     public void StopGame()
     {
-        
+        AudioSourceOk.PlayOneShot(DoorClosed);
         GameActive = false;
 
         doorAnimator.SetBool("GameActive", GameActive);
         Timer.StopAllCoroutines();
         foreach (Button tool in Tools)
+            
             tool.interactable = false;
 
         MB_PlayerInput.input.SwitchTool();

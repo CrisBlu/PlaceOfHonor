@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class MB_PlayerInput : MonoBehaviour
 {
     [SerializeField] Camera SceneCamera;
-    [SerializeField] Transform Cursor;
+    [SerializeField] Transform mousePos;
     public MeshRenderer[] XRayMats;
     [System.NonSerialized] public Data_Rock currentRock;
     public static MB_PlayerInput input;
@@ -48,7 +48,7 @@ public class MB_PlayerInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.position = PositionFromMouse(SceneCamera);
+        mousePos.position = PositionFromMouse(SceneCamera);
     }
 
 
@@ -94,7 +94,7 @@ public class MB_PlayerInput : MonoBehaviour
 
     void UseHammer(float power = 40f)
     {
-        Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .5f, rockMask);
+        Collider[] hitRocks = Physics.OverlapSphere(mousePos.position, .5f, rockMask);
 
         if (hitRocks.Length <= 0)
         { return; }
@@ -105,7 +105,7 @@ public class MB_PlayerInput : MonoBehaviour
         {
             if (!Manager.GameActive)
                 break;
-            float powerAfterFalloff = power - Vector3.Distance(Cursor.position, rock.transform.position);
+            float powerAfterFalloff = power - Vector3.Distance(mousePos.position, rock.transform.position);
             if (powerAfterFalloff <= 0)
             {
                 powerAfterFalloff = 1f;
@@ -122,7 +122,7 @@ public class MB_PlayerInput : MonoBehaviour
         while(useToolAction.IsPressed())
         {
 
-            Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .05f, rockMask);
+            Collider[] hitRocks = Physics.OverlapSphere(mousePos.position, .05f, rockMask);
 
             if (hitRocks.Length > 0)
             {
@@ -226,11 +226,11 @@ public class MB_PlayerInput : MonoBehaviour
         switch(currentTool)
         {
             case Tool.hammer:
-                 //Cursor.SetCursor(cursor[0], new Vector2(0, 0), cursorMode);
+                 Cursor.SetCursor(cursor[0], new Vector2(0, 0), cursorMode);
                 break;
 
             case Tool.drill:
-                 //Cursor.SetCursor(cursor[2], new Vector2(0, 0), cursorMode);
+                 Cursor.SetCursor(cursor[2], new Vector2(0, 0), cursorMode);
                 break;
 
             case Tool.none:

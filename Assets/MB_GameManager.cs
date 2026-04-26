@@ -7,6 +7,7 @@ public class MB_GameManager : MonoBehaviour
 {
     [SerializeField] GameObject[] FossilRocks;
     [SerializeField] MB_FossilBar fossilBar;
+    [SerializeField] Animator doorAnimator;
     [SerializeField] MB_Timer Timer;
     
     [SerializeField] Button[] Tools;
@@ -57,6 +58,7 @@ public class MB_GameManager : MonoBehaviour
         foreach (Button tool in Tools)
             tool.interactable = true;
 
+        doorAnimator.SetBool("GameActive", GameActive);
         currentRock = Instantiate(FossilRocks[i]);
         MB_PlayerInput.input.currentRock = currentRock.GetComponent<MB_XRay>().data;
         fossilBar.rockData = currentRock.GetComponent<MB_XRay>().data;
@@ -70,7 +72,10 @@ public class MB_GameManager : MonoBehaviour
 
     public void StopGame()
     {
+        
         GameActive = false;
+
+        doorAnimator.SetBool("GameActive", GameActive);
         Timer.StopAllCoroutines();
         foreach (Button tool in Tools)
             tool.interactable = false;

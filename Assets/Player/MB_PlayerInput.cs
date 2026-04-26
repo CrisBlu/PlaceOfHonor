@@ -2,18 +2,20 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MB_PlayerInput : MonoBehaviour
 {
     [SerializeField] Camera SceneCamera;
     [SerializeField] Transform Cursor;
+    public MeshRenderer[] XRayMats;
+    [System.NonSerialized] public Data_Rock currentRock;
+    public static MB_PlayerInput input;
+    [SerializeField] MB_GameManager Manager;
+    [SerializeField] Image XrayTrickSlot;
+    [SerializeField] Image XrayFlash;
 
-    enum Tool
-    { 
-        hammer,
-        drill,
-        none
-    }
+
 
 
     
@@ -22,7 +24,11 @@ public class MB_PlayerInput : MonoBehaviour
     private Tool currentTool = Tool.hammer;
 
     private InputAction useToolAction;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private void Awake()
+    {
+        input = this;
+    }
     void Start()
     {
         useToolAction = InputSystem.actions.FindAction("Use");
@@ -90,18 +96,26 @@ public class MB_PlayerInput : MonoBehaviour
 
         foreach (Collider rock in hitRocks)
         {
-            //float powerAfterFalloff = 
-            rock.GetComponent<MB_Rock>().TakeDamage(power, layerStruck);
+            if (!Manager.GameActive)
+                break;
+            float powerAfterFalloff = power - Vector3.Distance(Cursor.position, rock.transform.position);
+            if (powerAfterFalloff <= 0)
+            {
+                powerAfterFalloff = 1f;
+                Debug.Log("Power was less than or 0");
+            }
+                
+            rock.GetComponent<MB_Rock>().TakeDamage(powerAfterFalloff, layerStruck);
         }
     }
 
-    async void UseDrill(float power = .1f)
+    async void UseDrill(float power = 1f)
     {
 
         while(useToolAction.IsPressed())
         {
 
-            Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .1f, rockMask);
+            Collider[] hitRocks = Physics.OverlapSphere(Cursor.position, .05f, rockMask);
 
             if (hitRocks.Length > 0)
             {
@@ -109,9 +123,15 @@ public class MB_PlayerInput : MonoBehaviour
 
                 foreach (Collider rock in hitRocks)
                 {
-                    //float powerAfterFalloff = 
+                    if (!Manager.GameActive)
+                        break;
+
                     rock.GetComponent<MB_Rock>().TakeDamage(power, layerStruck);
+
                 }
+
+                
+                
             }
             await Task.Yield();
 
@@ -119,5 +139,83 @@ public class MB_PlayerInput : MonoBehaviour
 
         
 
+    }
+
+    public void TriggerXRay()
+    {
+        TriggerXRayImage(XrayFlash, .0125f);
+
+        if (currentRock.XRayTrick)
+        {
+            XrayTrickSlot.sprite = currentRock.XRayTrickImage;
+            TriggerXRayImage(XrayTrickSlot);
+            currentRock.XRayTrick = false;
+            return;
+
+        }
+
+
+        foreach (MeshRenderer mat in XRayMats)
+        {
+            TriggerXRayInternal(mat.material);
+        }
+    }
+
+    public async void TriggerXRayImage(Image slot, float fadePower = .1f)
+    {
+        float current = 0;
+        float limit = 1;
+
+        while (current < limit)
+        {
+            current += 0.1f;
+            slot.color = new Color(1, 1, 1, current);
+            await Task.Yield();
+        }
+
+
+        while (current > 0)
+        {
+            current -= fadePower;
+            slot.color = new Color(1, 1, 1, current);
+            await Task.Yield();
+        }
+    }
+
+    public async void TriggerXRayInternal(Material mat)
+    {
+        float current = 0;
+        float limit = 8;
+
+        while (current < limit)
+        {
+            current += 0.1f;
+            mat.SetColor("_EmissionColor", Color.white * current);
+            await Task.Yield();
+        }
+
+        while (current > limit / 4)
+        {
+            current -= 0.05f;
+            mat.SetColor("_EmissionColor", Color.white * current);
+            await Task.Yield();
+        }
+
+        while (current > 0)
+        {
+            current -= 0.01f;
+            mat.SetColor("_EmissionColor", Color.white * current);
+            await Task.Yield();
+        }
+    }
+
+    public void SwitchTool(Data_Tool tool = null)
+    {
+        if (tool == null)
+            currentTool = Tool.none;
+        else
+            currentTool = tool.tool;
+       
+        
     }
 }

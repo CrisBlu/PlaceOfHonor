@@ -31,7 +31,7 @@ public class MB_GameManager : MonoBehaviour
         nextFossilRock = InputSystem.actions.FindAction("NextFossil");
         removeFossilRock = InputSystem.actions.FindAction("RemoveFossil");
 
-        nextFossilRock.performed += SpawnNewRock;
+        nextFossilRock.performed += SpawnNewRockInput;
         removeFossilRock.performed += TakeAwayRock;
 
        
@@ -39,7 +39,7 @@ public class MB_GameManager : MonoBehaviour
 
     private void OnDisable()
     {
-        nextFossilRock.performed -= SpawnNewRock;
+        nextFossilRock.performed -= SpawnNewRockInput;
         removeFossilRock.performed -= TakeAwayRock;
     }
 
@@ -53,15 +53,20 @@ public class MB_GameManager : MonoBehaviour
 
     }
 
-    public async void SpawnNewRock(InputAction.CallbackContext context)
+    public void SpawnNewRockInput(InputAction.CallbackContext context)
     {
+        SpawnNewRock();
 
+    }
+
+    public async void SpawnNewRock()
+    {
 
 
 
         ClearRock();
 
-        await Task.Yield();
+        await Awaitable.WaitForSecondsAsync(1);
         GameActive = true;
         foreach (Button tool in Tools)
             tool.interactable = true;
@@ -124,5 +129,8 @@ public class MB_GameManager : MonoBehaviour
         await Awaitable.WaitForSecondsAsync(4);
 
         ScoreDisplay.enabled = false;
+
+        await Awaitable.WaitForSecondsAsync(1);
+        SpawnNewRock();
     }
 }

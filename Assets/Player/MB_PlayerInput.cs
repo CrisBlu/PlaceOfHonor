@@ -10,6 +10,7 @@ public class MB_PlayerInput : MonoBehaviour
     public MeshRenderer[] XRayMats;
     [System.NonSerialized] public Data_Rock currentRock;
     public static MB_PlayerInput input;
+    [SerializeField] MB_GameManager Manager;
 
 
 
@@ -92,6 +93,8 @@ public class MB_PlayerInput : MonoBehaviour
 
         foreach (Collider rock in hitRocks)
         {
+            if (!Manager.GameActive)
+                break;
             //float powerAfterFalloff = 
             rock.GetComponent<MB_Rock>().TakeDamage(power, layerStruck);
         }

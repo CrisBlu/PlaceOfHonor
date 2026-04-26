@@ -1,6 +1,8 @@
+using System;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class MB_GameManager : MonoBehaviour
@@ -9,11 +11,13 @@ public class MB_GameManager : MonoBehaviour
     [SerializeField] MB_FossilBar fossilBar;
     [SerializeField] Animator doorAnimator;
     [SerializeField] MB_Timer Timer;
+    [SerializeField] Data_Scoring Scoring;
+
     
     [SerializeField] Button[] Tools;
     private GameObject currentRock;
     private int i;
-    private bool GameActive;
+    [NonSerialized] public bool GameActive;
 
 
     private InputAction nextFossilRock;
@@ -50,7 +54,10 @@ public class MB_GameManager : MonoBehaviour
 
     public async void SpawnNewRock(InputAction.CallbackContext context)
     {
-        StopGame();
+
+
+
+
         ClearRock();
 
         await Task.Yield();
@@ -81,6 +88,8 @@ public class MB_GameManager : MonoBehaviour
             tool.interactable = false;
 
         MB_PlayerInput.input.SwitchTool();
+
+        Scoring.scores.Add(fossilBar.score);
     }
 
 

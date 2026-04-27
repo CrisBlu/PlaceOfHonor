@@ -23,6 +23,7 @@ public class Template_UIManager : MonoBehaviour
     public GameObject dialogueContainer;
     public GameObject NPC_Container;
     public GameObject playerContainer;
+    public VIDE_Assign[] vide;
 
     public Text NPC_Text;
     public Text NPC_label;
@@ -56,7 +57,7 @@ public class Template_UIManager : MonoBehaviour
 
     void Awake()
     {
-
+        Interact(vide[0]);
     }
 
     //Call this to begin the dialogue and advance through it

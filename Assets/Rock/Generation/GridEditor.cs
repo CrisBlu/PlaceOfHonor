@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.TextCore.Text;
 
-public class GridEditor : EditorWindow
+/*public class GridEditor : EditorWindow
 {
     #region member fields
     GameObject parent;
@@ -83,4 +83,4 @@ public class GridEditor : EditorWindow
 
 
 
-}
+}*/

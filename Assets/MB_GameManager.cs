@@ -16,10 +16,13 @@ public class MB_GameManager : MonoBehaviour
     [SerializeField] AudioClip DoorOpen;
     [SerializeField] AudioClip DoorClosed;
     [SerializeField] AudioSource AudioSourceOk;
+    [SerializeField] Template_UIManager uiManager;
     
     [SerializeField] Button[] Tools;
     private GameObject currentRock;
     private int i;
+    private int j;
+    private int[] jValues = { 2, 3, 4 };
     [NonSerialized] public bool GameActive;
 
 
@@ -29,11 +32,12 @@ public class MB_GameManager : MonoBehaviour
     void Start()
     {
         i = 0;
+        j = 0;
         GameActive = false;
         nextFossilRock = InputSystem.actions.FindAction("NextFossil");
         removeFossilRock = InputSystem.actions.FindAction("RemoveFossil");
 
-        nextFossilRock.performed += SpawnNewRock;
+        nextFossilRock.performed += SpawnNewRockInput;
         removeFossilRock.performed += TakeAwayRock;
 
        
@@ -41,7 +45,7 @@ public class MB_GameManager : MonoBehaviour
 
     private void OnDisable()
     {
-        nextFossilRock.performed -= SpawnNewRock;
+        nextFossilRock.performed -= SpawnNewRockInput;
         removeFossilRock.performed -= TakeAwayRock;
     }
 
@@ -55,15 +59,20 @@ public class MB_GameManager : MonoBehaviour
 
     }
 
-    public async void SpawnNewRock(InputAction.CallbackContext context)
+    public void SpawnNewRockInput(InputAction.CallbackContext context)
     {
+        SpawnNewRock();
 
+    }
+
+    public async void SpawnNewRock()
+    {
 
 
 
         ClearRock();
 
-        await Task.Yield();
+        await Awaitable.WaitForSecondsAsync(1);
         GameActive = true;
         foreach (Button tool in Tools)
             tool.interactable = true;
@@ -128,5 +137,17 @@ public class MB_GameManager : MonoBehaviour
         await Awaitable.WaitForSecondsAsync(4);
 
         ScoreDisplay.enabled = false;
+
+        await Awaitable.WaitForSecondsAsync(1);
+
+        if(i < jValues[j])
+            SpawnNewRock();
+        else
+        {
+            j++;
+            uiManager.Interact(uiManager.vide[1]);
+        }
+            
+        
     }
 }

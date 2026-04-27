@@ -27,7 +27,7 @@ public class MB_PlayerInput : MonoBehaviour
 
     private LayerMask defaultMask;
     private LayerMask rockMask;
-    private Tool currentTool = Tool.hammer;
+    private Tool currentTool = Tool.none;
 
     private InputAction useToolAction;
 

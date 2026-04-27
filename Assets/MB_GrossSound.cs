@@ -9,6 +9,7 @@ public class MB_GrossSound : MonoBehaviour
 
     public async void PlayGrossSound()
     {
+        Debug.Log("test");
         source.PlayOneShot(grossClip);
 
         await Awaitable.WaitForSecondsAsync(3);
